@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="etch.css">
+    <script src="etch.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="left">
+        <h1>Etch-a-Sketch</h1>
+
+        <div class="buttonBlock">
+
+            <div class="color">
+                <p>Color</p>
+                <input type="color" id="colorpicker" value="#0000ff">
+            </div>
+
+            <button class="eraser">Eraser</Button>
+
+            <div class="type">
+                <p>Draw:</p>
+                <button>On Click</button>
+                <button>On Hover</button>
+            </div>
+
+            <div class="slideContainer">
+                <p>Pixels:</p>
+                <p class="gridInfo">#</p>
+            </div>
+
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+
+            <button class="reset">Reset</button>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="right">
+        <div class="container"></div>
+
+        <div class="gridlines">
+            <p>Gridlines:</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

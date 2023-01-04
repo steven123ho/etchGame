@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+}
+
+h1 {
+    text-align: center;
+}
+.buttonBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: gainsboro;
+    width: 300px;
+    height: 500px;
+    margin-top: 100px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.buttonBlock>div {
+    padding:10px;
+}
+
+.color,
+.type,
+.slideContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button {
+    font-size: 15px;
+    box-shadow: 0px 3px black;
+    border-radius: 10px;
+    max-width: 120px;
+    height: 35px;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0px 0px black;
+}
+
+.reset,
+.eraser {
+    min-width: 100px;
+    align-self: center;
+}
+
+/* right side draw area and gridline checkbox*/
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin-top: 20px;
+    width: 700px;
+    height:700px;
+    box-shadow: 5px 5px gray;
+    border: solid black;
+}
+
+.pixel {
+    width: 100px;
+    height: 100px;
+    border:solid black;
+}
+
+.gridlines {
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
