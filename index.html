@@ -11,31 +11,26 @@
 </head>
 
 <body>
-
     <div class="left">
         <h1>Etch-a-Sketch</h1>
 
         <div class="buttonBlock">
 
+
             <div class="color">
                 <p>Color</p>
-                <input type="color" id="colorpicker" value="#0000ff">
+                <input type="color" id="colorpicker" value="#6839ff">
+                <img id="rainbow" src="./imgs/rainbow.png">
             </div>
 
-            <button class="eraser">Eraser</Button>
-
-            <div class="type">
-                <p>Draw:</p>
-                <button>On Click</button>
-                <button>On Hover</button>
-            </div>
+            <button id="eraser">Eraser</Button>
 
             <div class="slideContainer">
                 <p>Pixels:</p>
-                <p class="gridInfo">#</p>
+                <p class="gridNum">#</p>
             </div>
+            <input type="range" min="1" max="64" value="4" class="slider" id="myRange" smooth="yes" />
 
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
 
             <button class="reset">Reset</button>
 
@@ -51,8 +46,8 @@
         <div class="gridlines">
             <p>Gridlines:</p>
             <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
+                <input type="checkbox" class="lines">
+                <div class="slider round"></div>
             </label>
         </div>
     </div>
