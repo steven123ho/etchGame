@@ -3,25 +3,19 @@ const slider = document.querySelector('.slider')
 const gridNum = document.querySelector('.gridNum')
 const colorPicker = document.querySelector('#colorpicker')
 const reset = document.querySelector('.reset')
-const onClick = document.querySelector('.onclick')
-const onHover = document.querySelector('.onhover')
 const eraser = document.querySelector('#eraser')
 const lines = document.querySelector('.lines')
-let innerContainer = document.createElement('span')
+const rainbow = document.querySelector('#rainbow')
 
 resolution = slider.value;
 gridNum.textContent = `${resolution} X ${resolution}`
 
 
-function clearGrid() {
+function makeGrid() {
+
     while (container.firstChild) {
         container.removeChild(container.firstChild)
     }
-}
-
-function makeGrid() {
-
-    clearGrid()
     //creates divs inside of divs eqaul to resolution
     for (let i = 0; i < resolution; i++){
         innerContainer = document.createElement('span')
@@ -48,33 +42,55 @@ function makeGrid() {
 function colorChange () {
     colorPicker.addEventListener('change', () => {
         color = colorPicker.value
-
+        rainbowColorRemove()
         if (eraser.classList = 'erase') {
             eraser.classList.toggle('erase')
-        }
+            } 
     })
 }
 
-
-let color = colorPicker.value
-colorChange()
-makeGrid()
-
-eraser.addEventListener('click', () => {
+function rainbowColor () {
+    if (eraser.classList = 'erase') {
+        eraser.classList.toggle('erase')
+        } 
+    allPixels = document.querySelectorAll('#pixel')
+    allPixels.forEach (pixel => {
+            pixel.addEventListener('mouseover', () => {
+                let r = Math.floor(Math.random() * 255)
+                let g = Math.floor(Math.random() * 255)
+                let b = Math.floor(Math.random() * 255)
+                color =  `rgb(${r},${g},${b})`
+            })
+    })
+}
     
-    eraser.classList.toggle('erase')
-    if (eraser.classList == 'erase') {
-        console.log(eraser.classList)
-        color = '#ffffff';
-    } else {   
-        color = colorPicker.value;
-    }
-})
+function rainbowColorRemove () {
+    allPixels = document.querySelectorAll('#pixel')
+    allPixels.forEach (pixel => {
+        pixel.addEventListener('mouseover', () => {
+            color = colorPicker.value
+        })
+    })
+}
 
 slider.addEventListener('mouseup', () => {
     resolution = slider.value
     gridNum.textContent = `${resolution} x ${resolution}`
     makeGrid()
+})
+
+eraser.addEventListener('click', () => {
+    eraser.classList.toggle('erase')
+    if (eraser.classList == 'erase') {
+        allPixels = document.querySelectorAll('#pixel')
+        allPixels.forEach (pixel => {
+            pixel.addEventListener('mouseover', () => {
+                color = '#FFFFFF'
+        })
+    })
+    } else {   
+        rainbowCoverRemove();
+    }
 })
 
 reset.addEventListener('click', () => {
@@ -89,6 +105,11 @@ lines.addEventListener('change', () => {
     })
 })
 
+
+let color = colorPicker.value
+makeGrid()
+colorChange()
+rainbow.addEventListener('click', rainbowColor)
 
 
 
