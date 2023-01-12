@@ -105,11 +105,11 @@ lines.addEventListener('change', () => {
     })
 })
 
+rainbow.addEventListener('click', rainbowColor)
 
 let color = colorPicker.value
 makeGrid()
 colorChange()
-rainbow.addEventListener('click', rainbowColor)
 
 
 
