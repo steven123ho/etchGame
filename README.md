@@ -8,4 +8,4 @@ Features Include:
 <li>Grid Reset </li>
 
 
-<h2><a href=" https://steven123ho.github.io/etchGame/">👉 Live Demo </a></h2>
+<h2><a href="https://steven123ho.github.io/etchGame/">👉 Live Demo </a></h2>
