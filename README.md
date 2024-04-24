@@ -9,3 +9,6 @@ Features Include:
 
 
 <h2><a href="https://steven123ho.github.io/etchGame/">👉 Live Demo </a></h2>
+
+
+![image](https://github.com/steven123ho/etchGame/assets/110568734/24aaafba-2391-4c57-af84-8473b35d2661)
